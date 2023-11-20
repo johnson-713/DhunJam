@@ -1,0 +1,56 @@
+.dashboard {
+    color: #FFFFFF;
+    place-content: center;
+    
+}
+
+h3 {
+    text-align: center;
+}
+
+.dashboard__radio--title {
+    width: 45%;
+}
+
+.dashboard__amounts--title {
+    width: 45%;
+}
+
+.dashboard__radio,
+.dashboard__request {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
+
+.dashboard__radio--btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 80px;
+    gap: 15px;
+}
+
+.radio {
+    margin-right: 10px;
+    transform: translateY(35%);
+}
+.dashboard__request > input {
+    width: 35%;
+    margin-right: 20px;
+}
+
+.dashboard__amounts {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
+
+.dashboard__inputs {
+    width: 40%;
+}
+
+.dashboard__inputs > input {
+    width: 15%;
+    margin-right: 10px;
+}

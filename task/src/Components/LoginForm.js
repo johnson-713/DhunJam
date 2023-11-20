@@ -1,26 +1,32 @@
 import React, { useState } from 'react';
 import './LoginForm.css';
 import { FaEye, FaEyeSlash} from 'react-icons/fa';
+import axios from 'axios';
 
-const LoginForm = () => {
+const LoginForm = ({onLogin}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
   const [showPassword, setShowPassword] = useState(false)
+
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('https://stg.dhunjam.in/account/admin/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
+      const response = await axios.post('https://stg.dhunjam.in/account/admin/login', {
+        username,
+        password
       })
-
-      const data = await response.json();
-
-    } catch (error){
-      console.error('Error:', error);
+      if(response.status === 200 && response.data.response === 'Success'){
+        const token = response.data.data.token;
+        onLogin(token)
+      }
+      else {
+        setError('Login failed. Please check your credentials')
+      }
+      
+    } catch (error) {
+      console.error('Login failed:', error.message)
+      setError('An error occured. Please try again')
     }
   }
   return (
@@ -36,9 +42,9 @@ const LoginForm = () => {
 
             <div style={{ position: 'relative'}}>
             <input 
-              type={showPassword ? 'text' : 'password'} 
+              type={!showPassword ? 'password' : 'text'} 
               value={password} 
-              onChange={(e) => setPassword(e.target.val)} 
+              onChange={(e) => setPassword(e.target.value)} 
               placeholder='Password'
             />
             <button
@@ -61,6 +67,7 @@ const LoginForm = () => {
         </form>
         <button className="button" onClick={handleLogin}>Sign in</button>
         <span>New Registration ?</span>
+        {error && <p style={{color: 'red'}}>{error}</p>}
     </div>
   )
 }

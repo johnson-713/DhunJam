@@ -1,4 +1,4 @@
-.dashboard {
+/* .dashboard {
     color: #FFFFFF;
     place-content: center;
     
@@ -53,4 +53,58 @@ h3 {
 .dashboard__inputs > input {
     width: 15%;
     margin-right: 10px;
+} */
+
+/* Dashboard.css */
+
+.dashboard {
+    color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+.dashboard__amounts,
+.dashboard__radio,
+.dashboard__request {
+    display: flex;
 }
+  
+  .dashboard h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard__radio,
+  .dashboard__request,
+  .dashboard__amounts {
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  .dashboard__radio--title p {
+    font-size: 1em;
+  }
+  
+  .dashboard__radio--btns {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .dashboard__radio--btns div {
+    flex: 1;
+  }
+  
+  .dashboard__request input,
+  .dashboard__amounts input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard__amounts--title p {
+    font-size: 1em;
+  }
+  

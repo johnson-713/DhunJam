@@ -1,110 +1,68 @@
-/* .dashboard {
-    color: #FFFFFF;
-    place-content: center;
-    
-}
-
-h3 {
-    text-align: center;
-}
-
-.dashboard__radio--title {
-    width: 45%;
-}
-
-.dashboard__amounts--title {
-    width: 45%;
-}
-
-.dashboard__radio,
-.dashboard__request {
-    display: flex;
-    justify-content: space-between;
-    width: 600px;
-}
-
-.dashboard__radio--btns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 80px;
-    gap: 15px;
-}
-
-.radio {
-    margin-right: 10px;
-    transform: translateY(35%);
-}
-.dashboard__request > input {
-    width: 35%;
-    margin-right: 20px;
-}
-
-.dashboard__amounts {
-    display: flex;
-    justify-content: space-between;
-    width: 600px;
-}
-
-.dashboard__inputs {
-    width: 40%;
-}
-
-.dashboard__inputs > input {
-    width: 15%;
-    margin-right: 10px;
-} */
-
-/* Dashboard.css */
-
 .dashboard {
-    color: white;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-  }
+  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
 
 .dashboard__amounts,
 .dashboard__radio,
 .dashboard__request {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
 }
-  
-  .dashboard h3 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-  }
-  
-  .dashboard__radio,
-  .dashboard__request,
-  .dashboard__amounts {
-    width: 100%;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-  }
-  
-  .dashboard__radio--title p {
-    font-size: 1em;
-  }
-  
-  .dashboard__radio--btns {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .dashboard__radio--btns div {
-    flex: 1;
-  }
-  
-  .dashboard__request input,
-  .dashboard__amounts input {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  
-  .dashboard__amounts--title p {
-    font-size: 1em;
-  }
-  
+
+.dashboard h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.dashboard__radio,
+.dashboard__request,
+.dashboard__amounts {
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.dashboard__radio--title p {
+  font-size: 12px;
+}
+
+.dashboard__radio--btns {
+  display: flex;
+  gap: 10px;
+}
+
+.dashboard__radio--btns div {
+  flex: 1;
+}
+
+.dashboard__request > input {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.dashboard__inputs {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.dashboard__inputs > input {
+  width: 15%;
+}
+
+.dashboard__amounts--title {
+  margin-right: 100px;
+}
+
+.dashboard__amounts--title p {
+  font-size: 12px;
+}
+
+.dashboard__request p {
+  font-size: 12px;
+}
